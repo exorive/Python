@@ -15,7 +15,7 @@ print(first_list)
 second_list = ['Java', 'PHP']
 
 # 6. Expand the first list by elements of the second list
-combined_list = first_list + second_list
+first_list.extend(second_list)
 
 # 7. Output an extended list of 6 items to the discrimination
-print(combined_list)
+print(first_list)
