@@ -1,3 +1,6 @@
+1. Create two similar vocabularies
+2. Using the and operator print a message to the terminal
+
 first_dict = {
     'apple': 100,
     'banana': 500,
