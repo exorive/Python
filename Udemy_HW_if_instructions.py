@@ -5,37 +5,35 @@
 # 5. Call the function several times with different arguments
 
 
-def route_info(a):
-    if a.get('distance') and type(a['distance']) is int:
-        return f"Distance to your destination is {a['distance']}"
+def route_info(route):
+    if ('distance' in route) and (type(route['distance']) == int):
+        return f"Distance to your destination is {route['distance']}"
 
-    if a.get('speed') and a.get('time'):
-        b = a['speed'] * a['time']
-        return f"Distance to your destination is {b}"
+    if ('speed' in route) and ('time' in route):
+        return f"Distance to your destination is {route['speed'] * route['time']}"
 
-    if not a.get('distance') or type(a['distance']) is not int:
-        return "No distance info is available or distance is not integer"
+    return "No distance info is available"
 
 
-my_dict_f = {
+my_dict_a = {
     'distance': 200,
     'speed': 60,
     'time': 2,
 }
 
-my_dict_d = {
+my_dict_b = {
     'speed': 60,
     'time': 2,
 }
 
-my_dict_dd = {
+my_dict_c = {
     'transport': 'car',
     'color': 'red',
     'time': 2,
 }
 
 
-print(route_info(my_dict_f))
-print(route_info(my_dict_d))
-print(route_info(my_dict_dd))
+print(route_info(my_dict_a))
+print(route_info(my_dict_b))
+print(route_info(my_dict_c))
 
